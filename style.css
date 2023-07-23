@@ -9,6 +9,7 @@
 button {
     border: none;
     cursor: pointer;
+    user-select: none;
 }
 
 :root {
@@ -21,6 +22,10 @@ button {
 
 body {
     background: var(--yellow);
+}
+
+body * {
+    font-family: 'Luckiest Guy', cursive;
 }
 
 /* header */
@@ -40,6 +45,7 @@ header > img {
 /* main */
 
 #main_button {
+    display: block;
     width: 280px;
     height: 280px;
     margin: 0 auto 24px auto;
@@ -48,10 +54,8 @@ header > img {
     background: var(--red);
     border: 5px solid var(--black);
     border-radius: 140px;
-    font-size: 42px;
+    font-size: 64px;
     font-weight: bolder;
-    cursor: pointer;
-    user-select: none;
 }
 
 #main_button:active {
@@ -67,9 +71,6 @@ header > img {
     line-height: 64px;
     color: var(--white);
     font-size: 24px;
-    letter-spacing: 1.75px;
-    font-weight: bolder;
+    letter-spacing: 2px;
     border-radius: 8px;
-    cursor: pointer;
-    user-select: none;
 }
