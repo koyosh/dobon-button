@@ -47,6 +47,18 @@ header > img {
     margin: 0 auto;
 }
 
+#open_rule,
+#close_rule {
+    display: block;
+    width: 120px;
+    background: var(--blue);
+    color: var(--white);
+    line-height: 48px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* main */
 
 #main_button {
@@ -86,4 +98,58 @@ header > img {
     font-size: 24px;
     letter-spacing: 2px;
     border-radius: 8px;
+}
+
+.button_text {
+    position: relative;
+    top: 3px;
+}
+
+.button_text.white {
+    color: var(--white);
+}
+
+.button_text.black {
+    color: var(--black);
+}
+
+#rule_modal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1e1e1eee;
+}
+
+#rule_modal * {
+    font-family: sans-serif;
+}
+
+#rule_modal_wrapper {
+    background: var(--yellow);
+    width: 90vw;
+    max-width: 320px;
+    padding: 24px 12px;
+    border-radius: 12px;
+}
+
+#rule_modal_wrapper h3 {
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+#rule_modal_wrapper ul {
+    margin: 0 0 12px 0;
+}
+
+#rule_modal_wrapper  li {
+    margin-left: 1em;
+}
+
+#rule_modal_wrapper li>span {
+    vertical-align: -2px
 }

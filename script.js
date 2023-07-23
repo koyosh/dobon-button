@@ -1,8 +1,11 @@
 const btn = document.querySelector('#main_button');
-const retryBtn = document.querySelector('#retry_button')
+const btnText = btn.querySelector('span');
+const retryBtn = document.querySelector('#retry_button');
+const ruleBtn = document.querySelector('#open_rule');
+const ruleModal = document.querySelector('#rule_modal');
+const closeRuleBtn = document.querySelector('#close_rule');
 
 let modProb = 0;
-
 
 let isDobon = false;
 
@@ -11,12 +14,12 @@ const pressButton = () => {
     if (!isDobon) {
         if (prob <= modProb) {
             isDobon = true;
-            btn.innerHTML = 'DOBON!';
+            btnText.innerHTML = 'DOBON!';
             btn.disabled = 'disabled';
             retryBtn.style.display = 'block';
         } else {
             modProb++;
-            btn.innerHTML = modProb;
+            btnText.innerHTML = modProb;
         }
     }
 }
@@ -26,7 +29,15 @@ const retry = () => {
     btn.disabled = null;
     isDobon = false;
     modProb = 0;
-    btn.innerHTML = modProb;
+    btnText.innerHTML = modProb;
+}
+
+const showRule = () => {
+    ruleModal.style.display = 'flex';
+}
+
+const hideRule = () => {
+    ruleModal.style.display = 'none';
 }
 
 btn.addEventListener('click', () => {
@@ -35,4 +46,12 @@ btn.addEventListener('click', () => {
 
 retryBtn.addEventListener('click', () => {
     retry();
+})
+
+ruleBtn.addEventListener('click', () => {
+    showRule();
+})
+
+closeRuleBtn.addEventListener('click', () => {
+    hideRule();
 })

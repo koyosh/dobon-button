@@ -15,14 +15,27 @@
 
     <header>
         <img src="img/logo.png" alt="App logo">
+        <button id="open_rule"><span class="button_text white">How to Play</span></button>
     </header>
 
 
     <main>
-        <button id="main_button">0</button>
+        <button id="main_button"><span class="button_text black">0</span></button>
         <button id="retry_button" style="display:none;">
-            RETRY
+            <span class="button_text white">RETRY</span>
         </button>
+        <div id="rule_modal" style="display:none;">
+            <div id="rule_modal_wrapper">
+                <h3>遊び方</h3>
+                <ul>
+                    <li><span>赤いボタンを押すたびにゲームオーバー (ドボン) になる確率が上がっていきます。</span></li>
+                    <li><span>ボタンの中に表示されている数字はボタンを押した回数を示すと同時に、次にボタンを押したときにドボンになる確率 (単位は%) も示しています。</span></li>
+                    <li><span>ドボンになったらそれ以上ボタンを押せなくなります。画面下部に表示される青い「RETRY」ボタンを押すと最初から遊ぶことができます。</span></li>
+                    <li><span>理論上は最大100回ボタンを押すことができますが、開発者の体感では30回押せれば多い方です。</span></li>
+                </ul>
+                <button id="close_rule">閉じる</button>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
