@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+:root {
+    --red: #fa4848;
+    --blue: #61a1d5;
+    --white: #efefef;
+    --black: #1e1e1e;
+    --yellow: #ffea00;
+}
+
+body {
+    background: var(--yellow);
+}
+
+/* header */
+
+header {
+    margin: 0 0 24px 0;
+    padding: 12px 24px;
+}
+
+header > img {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* main */
+
+#main_button {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 24px auto;
+    text-align: center;
+    line-height: 280px;
+    background: var(--red);
+    border: 5px solid var(--black);
+    border-radius: 140px;
+    font-size: 42px;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+}
+
+#main_button:active {
+    filter: brightness(1.5);
+}
+
+#retry_button {
+    background: var(--blue);
+    width: 160px;
+    height: 64px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 64px;
+    color: var(--white);
+    font-size: 24px;
+    letter-spacing: 1.75px;
+    font-weight: bolder;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
