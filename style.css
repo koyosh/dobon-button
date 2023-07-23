@@ -20,7 +20,7 @@ button {
     --yellow: #ffea00;
 }
 
-html * {
+html {
     touch-action: manipulation;
 }
 
@@ -81,6 +81,7 @@ header > img {
 
 #main_button[disabled] {
     cursor: unset;
+    touch-action: manipulation;
 }
 
 #main_button[disabled]:active {
