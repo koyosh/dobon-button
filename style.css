@@ -20,6 +20,10 @@ button {
     --yellow: #ffea00;
 }
 
+html {
+    touch-action: manipulation;
+}
+
 body {
     background: var(--yellow);
 }
