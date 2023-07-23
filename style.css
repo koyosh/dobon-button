@@ -10,6 +10,7 @@ button {
     border: none;
     cursor: pointer;
     user-select: none;
+    touch-action: manipulation;
 }
 
 :root {
@@ -18,10 +19,6 @@ button {
     --white: #efefef;
     --black: #1e1e1e;
     --yellow: #ffea00;
-}
-
-html {
-    touch-action: manipulation;
 }
 
 body {
@@ -81,7 +78,6 @@ header > img {
 
 #main_button[disabled] {
     cursor: unset;
-    touch-action: manipulation;
 }
 
 #main_button[disabled]:active {
