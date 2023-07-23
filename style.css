@@ -20,7 +20,7 @@ button {
     --yellow: #ffea00;
 }
 
-html {
+html * {
     touch-action: manipulation;
 }
 
