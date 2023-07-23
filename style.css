@@ -67,6 +67,14 @@ header > img {
     filter: brightness(1.5);
 }
 
+#main_button[disabled] {
+    cursor: unset;
+}
+
+#main_button[disabled]:active {
+    filter: none;
+}
+
 #retry_button {
     background: var(--blue);
     width: 160px;

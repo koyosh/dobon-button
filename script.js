@@ -12,6 +12,7 @@ const pressButton = () => {
         if (prob <= modProb) {
             isDobon = true;
             btn.innerHTML = 'DOBON!';
+            btn.disabled = 'disabled';
             retryBtn.style.display = 'block';
         } else {
             modProb++;
@@ -22,6 +23,7 @@ const pressButton = () => {
 
 const retry = () => {
     retryBtn.style.display = 'none';
+    btn.disabled = null;
     isDobon = false;
     modProb = 0;
     btn.innerHTML = modProb;
