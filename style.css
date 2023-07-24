@@ -23,6 +23,9 @@ button {
 
 body {
     background: var(--yellow);
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
 }
 
 body * {
@@ -40,18 +43,20 @@ header {
 header > img {
     display: block;
     width: 100vw;
-    max-width: 320px;
+    max-width: 240px;
     margin: 0 auto;
 }
 
 #open_rule,
-#close_rule {
+#close_rule,
+#retry_button {
     display: block;
+    height: 64px;
     width: 172px;
     background: var(--blue);
     color: var(--white);
     font-size: 24px;
-    line-height: 48px;
+    line-height: 64px;
     border-radius: 12px;
     text-align: center;
     margin: 0 auto;
@@ -113,8 +118,8 @@ header > img {
 
 #rule_modal {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -129,10 +134,12 @@ header > img {
 
 #rule_modal_wrapper {
     background: var(--yellow);
-    width: 90vw;
+    width: 90dvw;
+    height: 90dvw;
     max-width: 320px;
     padding: 24px 12px;
     border-radius: 12px;
+    overflow-y: scroll;
 }
 
 #rule_modal_wrapper h3 {
